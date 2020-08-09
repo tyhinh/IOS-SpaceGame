@@ -14,33 +14,33 @@ var gameScore = 0
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
-    // label used to display score
+    // Hiển thị diểm
     let scoreLabel = SKLabelNode(fontNamed: "the bold font")
     
-    // variable that keeps current level and label used to display level
+    // Hiển thị level
     var level = 0
     let levelLabel = SKLabelNode(fontNamed: "the bold font") // implement
     
-    // variable that keeps number of current lives and label used to display level
+    // Hiển thị mạng
     var livesNumber = 3
     let livesLabel = SKLabelNode(fontNamed: "the bold font")
     
-    // creating a node that represents the players ship
+    // Tạo tên lửa
     let player = SKSpriteNode(imageNamed: "ship")
     
     let bulletSound = SKAction.playSoundFileNamed("laser.wav", waitForCompletion: false)
     
     let explosionSound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
     
-    // Label that starts game when pressed
+    // Bắt đầu game
     let tapToStartLabel = SKLabelNode(fontNamed: "the bold font")
     
     
     enum gameState
     {
-        case preGame // prior to game start
-        case inGame // when game state is during the game
-        case afterGame // when game finishes
+        case preGame // Bắt đầu game
+        case inGame // Game hoạt động
+        case afterGame // Kết thúc game
     }
     
     var currentGameState = gameState.preGame
@@ -89,7 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
-        // set game score
+        // Thiết lâp điểm
         gameScore = 0
         
         self.physicsWorld.contactDelegate = self
@@ -107,7 +107,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
             self.addChild(background);
         }
         
-        // setting all of the players attributes and physics
+        // Thiết lập thuộc tính
         player.setScale(0.6); //size of ship
         player.position = CGPoint(x: self.size.width/2 , y: 0 - player.size.height)
         player.zPosition = 2
@@ -118,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         player.physicsBody!.contactTestBitMask = physicsCategories.Enemy
         self.addChild(player)
         
-        // setting all of ScoreLabel's attributes and physics
+        // Thiết lập điểm game
         scoreLabel.text = "Score: 0"
         scoreLabel.fontSize = 70
         scoreLabel.fontColor = SKColor.white
@@ -127,7 +127,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         scoreLabel.zPosition = 100
         self.addChild(scoreLabel)
         
-        // setting all of livesLabel's attributes and physics
+        // Thiết lập mang choi
         livesLabel.text = "Lives: 3"
         livesLabel.fontSize = 70
         livesLabel.fontColor = SKColor.white
@@ -136,7 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         livesLabel.zPosition = 100
         self.addChild(livesLabel)
         
-        // setting all of tapToStartLabel's attributes and physics
+        // Thiết lập start game
         tapToStartLabel.text = "Tap To Begin"
         tapToStartLabel.fontSize = 100
         tapToStartLabel.fontColor = SKColor.white
@@ -146,7 +146,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         tapToStartLabel.alpha = 0
         self.addChild(tapToStartLabel)
         
-        // makes everything fade onto the scene for looks
+        // Làm mở mọi thứ
         let fadeInAction = SKAction.fadeIn(withDuration: 0.3)
         tapToStartLabel.run(fadeInAction)
         
@@ -160,8 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     //  runs once per game frame, and we are using it to move our background to make it scroll
     override func update(_ currentTime: TimeInterval)
     {
-        // change, find better implementation
-        // creating a 1% chance of spawning a new a life every game frame
+        // Tạo tỉ lệ rơi mạng
         let num = Int.random(in: 1 ... 400)
         
         if num == 1

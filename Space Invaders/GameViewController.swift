@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // creates file path for game sound track
+        // Am thanh
         let filePath = Bundle.main.path(forResource: "Superboy", ofType: "mp3")
         let audioNSURL = NSURL(fileURLWithPath: filePath!)
         

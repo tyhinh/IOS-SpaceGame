@@ -23,7 +23,6 @@
 		B8C9C9C3222A59DB009B9E10 /* laser.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8C9C9C2222A59DB009B9E10 /* laser.wav */; };
 		B8CDBC0D2236E2B60040DF41 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CDBC0C2236E2B60040DF41 /* MainMenuScene.swift */; };
 		B8CDBC11223773290040DF41 /* Superboy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8CDBC10223773290040DF41 /* Superboy.mp3 */; };
-		B8CDBC13223774E40040DF41 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CDBC12223774E40040DF41 /* appIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		B8C9C9C2222A59DB009B9E10 /* laser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = laser.wav; sourceTree = "<group>"; };
 		B8CDBC0C2236E2B60040DF41 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		B8CDBC10223773290040DF41 /* Superboy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Superboy.mp3; sourceTree = "<group>"; };
-		B8CDBC12223774E40040DF41 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +132,6 @@
 				B8C9C99B222A47FD009B9E10 /* Assets.xcassets */,
 				B8C9C99D222A47FD009B9E10 /* LaunchScreen.storyboard */,
 				B8C9C9A0222A47FD009B9E10 /* Info.plist */,
-				B8CDBC12223774E40040DF41 /* appIcon.png */,
 			);
 			path = "Space Invaders";
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 				B8C9C9C3222A59DB009B9E10 /* laser.wav in Resources */,
 				B8CDBC11223773290040DF41 /* Superboy.mp3 in Resources */,
 				B8C9C99A222A47FA009B9E10 /* Main.storyboard in Resources */,
-				B8CDBC13223774E40040DF41 /* appIcon.png in Resources */,
 				B89E3585222B799C0032BA3D /* explosion.wav in Resources */,
 				B8C9C991222A47FA009B9E10 /* GameScene.sks in Resources */,
 				B8C9C99C222A47FD009B9E10 /* Assets.xcassets in Resources */,
